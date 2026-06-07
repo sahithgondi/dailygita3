@@ -2935,211 +2935,212 @@
  },
  {
   "chapter": 13,
-  "number": 1,
+  "number": 0,
   "transliteration": "arjuna uvācha\nprakṛitiṁ puruṣhaṁ chaiva kṣhetraṁ kṣhetra-jñam eva cha\netad veditum ichchhāmi jñānaṁ jñeyaṁ cha keśhava",
-  "meaning": "Arjuna said, \"I wish to learn about Nature and the Spirit, the field and the knower of the field, knowledge and that which ought to be known, O Kesava.\""
+  "meaning": "Arjuna said, \"I wish to learn about Nature and the Spirit, the field and the knower of the field, knowledge and that which ought to be known, O Kesava.\"",
+  "note": "This opening verse — Arjuna's question — is not found in all recensions of the Gita. It is numbered 13.0 here so the remaining verses keep their traditional numbers."
  },
  {
   "chapter": 13,
-  "number": 2,
+  "number": 1,
   "transliteration": "śhrī-bhagavān uvācha\nidaṁ śharīraṁ kaunteya kṣhetram ity abhidhīyate\netad yo vetti taṁ prāhuḥ kṣhetra-jña iti tad-vidaḥ",
   "meaning": "The Blessed Lord said, \"O Arjuna, this body is called the field; he who knows it is called the knower of the field by those who know them.\""
  },
  {
   "chapter": 13,
-  "number": 3,
+  "number": 2,
   "transliteration": "kṣhetra-jñaṁ chāpi māṁ viddhi sarva-kṣhetreṣhu bhārata\nkṣhetra-kṣhetrajñayor jñānaṁ yat taj jñānaṁ mataṁ mama",
   "meaning": "Do thou also know Me as the knower of the field in all fields, O Arjuna. Knowledge of both the field and the knower of the field is considered by Me to be the knowledge."
  },
  {
   "chapter": 13,
-  "number": 4,
+  "number": 3,
   "transliteration": "tat kṣhetraṁ yach cha yādṛik cha yad-vikāri yataśh cha yat\nsa cha yo yat-prabhāvaśh cha tat samāsena me śhṛiṇu",
   "meaning": "Hear from Me in brief what the field is, of what nature it is, what its modifications are, whence it is, who He is, and what His powers are."
  },
  {
   "chapter": 13,
-  "number": 5,
+  "number": 4,
   "transliteration": "ṛiṣhibhir bahudhā gītaṁ chhandobhir vividhaiḥ pṛithak\nbrahma-sūtra-padaiśh chaiva hetumadbhir viniśhchitaiḥ",
   "meaning": "Sages have sung in many ways, with various distinctive chants and also with suggestive words indicative of the Absolute, full of reasoning and decisive."
  },
  {
   "chapter": 13,
-  "number": 6,
+  "number": 5,
   "transliteration": "mahā-bhūtāny ahankāro buddhir avyaktam eva cha\nindriyāṇi daśhaikaṁ cha pañcha chendriya-gocharāḥ",
   "meaning": "The great elements, egoism, intellect, and also the Unmanifested Nature, the ten senses, and one mind, and the five objects of the senses."
  },
  {
   "chapter": 13,
-  "number": 7,
+  "number": 6,
   "transliteration": "ichchhā dveṣhaḥ sukhaṁ duḥkhaṁ saṅghātaśh chetanā dhṛitiḥ\netat kṣhetraṁ samāsena sa-vikāram udāhṛitam",
   "meaning": "Desire, hatred, pleasure, pain, the aggregate (body), intelligence, and fortitude—the field has thus been briefly described with its modifications."
  },
  {
   "chapter": 13,
-  "number": 8,
+  "number": 7,
   "transliteration": "amānitvam adambhitvam ahinsā kṣhāntir ārjavam\nāchāryopāsanaṁ śhauchaṁ sthairyam ātma-vinigrahaḥ",
   "meaning": "Humility, unpretentiousness, non-injury, forgiveness, uprightness, service to the teacher, purity, steadfastness, and self-control."
  },
  {
   "chapter": 13,
-  "number": 9,
+  "number": 8,
   "transliteration": "indriyārtheṣhu vairāgyam anahankāra eva cha\njanma-mṛityu-jarā-vyādhi-duḥkha-doṣhānudarśhanam",
   "meaning": "Indifference to the objects of the senses and also absence of egoism; perceiving the evil in birth, death, old age, sickness, and pain."
  },
  {
   "chapter": 13,
-  "number": 10,
+  "number": 9,
   "transliteration": "asaktir anabhiṣhvaṅgaḥ putra-dāra-gṛihādiṣhu\nnityaṁ cha sama-chittatvam iṣhṭāniṣhṭopapattiṣhu",
   "meaning": "Non-attachment, non-identification of the Self with son, wife, home, and the rest, and constant even-mindedness in the face of the attainment of both desirable and undesirable."
  },
  {
   "chapter": 13,
-  "number": 11,
+  "number": 10,
   "transliteration": "mayi chānanya-yogena bhaktir avyabhichāriṇī\nvivikta-deśha-sevitvam aratir jana-sansadi",
   "meaning": "Unswerving devotion to Me through the Yoga of non-separation, resorting to solitary places, and a distaste for the company of people."
  },
  {
   "chapter": 13,
-  "number": 12,
+  "number": 11,
   "transliteration": "adhyātma-jñāna-nityatvaṁ tattva-jñānārtha-darśhanam\netaj jñānam iti proktam ajñānaṁ yad ato ’nyathā",
   "meaning": "Constancy in Self-knowledge, the perception of the end of true knowledge—this is declared to be knowledge, and what is opposed to it is ignorance."
  },
  {
   "chapter": 13,
-  "number": 13,
+  "number": 12,
   "transliteration": "jñeyaṁ yat tat pravakṣhyāmi yaj jñātvāmṛitam aśhnute\nanādi mat-paraṁ brahma na sat tan nāsad uchyate",
   "meaning": "I will declare that which is to be known, knowing which one attains immortality; the beginningless Supreme Brahman, which is neither being nor non-being."
  },
  {
   "chapter": 13,
-  "number": 14,
+  "number": 13,
   "transliteration": "sarvataḥ pāṇi-pādaṁ tat sarvato ’kṣhi-śhiro-mukham\nsarvataḥ śhrutimal loke sarvam āvṛitya tiṣhṭhati",
   "meaning": "With hands and feet everywhere, with eyes, heads, and mouths everywhere, with ears everywhere, He exists in the worlds, enveloping all."
  },
  {
   "chapter": 13,
-  "number": 15,
+  "number": 14,
   "transliteration": "sarvendriya-guṇābhāsaṁ sarvendriya-vivarjitam\nasaktaṁ sarva-bhṛich chaiva nirguṇaṁ guṇa-bhoktṛi cha",
   "meaning": "Shining by the functions of all the senses, yet without being attached to them; unattached, yet supporting all; devoid of qualities, yet the experiencer of them."
  },
  {
   "chapter": 13,
-  "number": 16,
+  "number": 15,
   "transliteration": "bahir antaśh cha bhūtānām acharaṁ charam eva cha\nsūkṣhmatvāt tad avijñeyaṁ dūra-sthaṁ chāntike cha tat",
   "meaning": "It is within and without all beings, both the unmoving and the moving; It is subtle and unknowable, and It is near and far away."
  },
  {
   "chapter": 13,
-  "number": 17,
+  "number": 16,
   "transliteration": "avibhaktaṁ cha bhūteṣhu vibhaktam iva cha sthitam\nbhūta-bhartṛi cha taj jñeyaṁ grasiṣhṇu prabhaviṣhṇu cha",
   "meaning": "Undivided yet, It exists as if divided in beings; It is to be known as the supporter of beings; It devours and It generates."
  },
  {
   "chapter": 13,
-  "number": 18,
+  "number": 17,
   "transliteration": "jyotiṣhām api taj jyotis tamasaḥ param uchyate\njñānaṁ jñeyaṁ jñāna-gamyaṁ hṛidi sarvasya viṣhṭhitam",
   "meaning": "That Light of all lights is said to be beyond darkness: knowledge, the knowable, and the goal of knowledge, seated in the hearts of all."
  },
  {
   "chapter": 13,
-  "number": 19,
+  "number": 18,
   "transliteration": "iti kṣhetraṁ tathā jñānaṁ jñeyaṁ choktaṁ samāsataḥ\nmad-bhakta etad vijñāya mad-bhāvāyopapadyate",
   "meaning": "Thus, the field, as well as knowledge and the knowable, have been briefly stated. My devotee, knowing this, enters into My being."
  },
  {
   "chapter": 13,
-  "number": 20,
+  "number": 19,
   "transliteration": "prakṛitiṁ puruṣhaṁ chaiva viddhy anādī ubhāv api\nvikārānśh cha guṇānśh chaiva viddhi prakṛiti-sambhavān",
   "meaning": "Know that Nature (matter) and the Spirit are both beginningless, and know also that all modifications and qualities are born from Nature."
  },
  {
   "chapter": 13,
-  "number": 21,
+  "number": 20,
   "transliteration": "kārya-kāraṇa-kartṛitve hetuḥ prakṛitir uchyate\npuruṣhaḥ sukha-duḥkhānāṁ bhoktṛitve hetur uchyate",
   "meaning": "In the production of the effect and the cause, Nature (matter) is said to be the cause; in the experience of pleasure and pain, the soul is said to be the one responsible."
  },
  {
   "chapter": 13,
-  "number": 22,
+  "number": 21,
   "transliteration": "puruṣhaḥ prakṛiti-stho hi bhuṅkte prakṛiti-jān guṇān\nkāraṇaṁ guṇa-saṅgo ’sya sad-asad-yoni-janmasu",
   "meaning": "The soul seated in Nature experiences the qualities born of Nature; attachment to the qualities is the cause of its birth in good and evil wombs."
  },
  {
   "chapter": 13,
-  "number": 23,
+  "number": 22,
   "transliteration": "upadraṣhṭānumantā cha bhartā bhoktā maheśhvaraḥ\nparamātmeti chāpy ukto dehe ’smin puruṣhaḥ paraḥ",
   "meaning": "The Supreme Soul in this body is also called the observer, the permitter, the sustainer, the enjoyer, the great Lord, and the Supreme Self."
  },
  {
   "chapter": 13,
-  "number": 24,
+  "number": 23,
   "transliteration": "ya evaṁ vetti puruṣhaṁ prakṛitiṁ cha guṇaiḥ saha\nsarvathā vartamāno ’pi na sa bhūyo ’bhijāyate",
   "meaning": "He who thus knows the Spirit and Matter together with their qualities, in whatever condition he may be, he is not reborn."
  },
  {
   "chapter": 13,
-  "number": 25,
+  "number": 24,
   "transliteration": "dhyānenātmani paśhyanti kechid ātmānam ātmanā\nanye sānkhyena yogena karma-yogena chāpare",
   "meaning": "Some behold the Self within themselves through meditation, others through the Yoga of knowledge, and still others through the Yoga of action."
  },
  {
   "chapter": 13,
-  "number": 26,
+  "number": 25,
   "transliteration": "anye tv evam ajānantaḥ śhrutvānyebhya upāsate\nte ’pi chātitaranty eva mṛityuṁ śhruti-parāyaṇāḥ",
   "meaning": "Others, too, who do not know thus, worship, having heard of It from others; they, too, cross beyond death, regarding what they have heard as the supreme refuge."
  },
  {
   "chapter": 13,
-  "number": 27,
+  "number": 26,
   "transliteration": "yāvat sañjāyate kiñchit sattvaṁ sthāvara-jaṅgamam\nkṣhetra-kṣhetrajña-sanyogāt tad viddhi bharatarṣhabha",
   "meaning": "Wherever a being is born, whether unmoving or moving, know thou, O best of the Bharatas (Arjuna), that it is from the union of the field and its knower."
  },
  {
   "chapter": 13,
-  "number": 28,
+  "number": 27,
   "transliteration": "samaṁ sarveṣhu bhūteṣhu tiṣhṭhantaṁ parameśhvaram\nvinaśhyatsv avinaśhyantaṁ yaḥ paśhyati sa paśhyati",
   "meaning": "He who sees the Supreme Lord existing truly in all beings, the imperishable within the perishable, sees indeed."
  },
  {
   "chapter": 13,
-  "number": 29,
+  "number": 28,
   "transliteration": "samaṁ paśhyan hi sarvatra samavasthitam īśhvaram\nna hinasty ātmanātmānaṁ tato yāti parāṁ gatim",
   "meaning": "For he who truly sees the same Lord dwelling everywhere does not destroy the Self by the self; rather, he attains the highest goal."
  },
  {
   "chapter": 13,
-  "number": 30,
+  "number": 29,
   "transliteration": "prakṛityaiva cha karmāṇi kriyamāṇāni sarvaśhaḥ\nyaḥ paśhyati tathātmānam akartāraṁ sa paśhyati",
   "meaning": "He sees, who sees that all actions are performed solely by Nature and that the Self is without action."
  },
  {
   "chapter": 13,
-  "number": 31,
+  "number": 30,
   "transliteration": "yadā bhūta-pṛithag-bhāvam eka-stham anupaśhyati\ntata eva cha vistāraṁ brahma sampadyate tadā",
   "meaning": "When a person sees all beings as resting in the One and emanating from the One alone, they then become Brahman."
  },
  {
   "chapter": 13,
-  "number": 32,
+  "number": 31,
   "transliteration": "anāditvān nirguṇatvāt paramātmāyam avyayaḥ\nśharīra-stho ’pi kaunteya na karoti na lipyate",
   "meaning": "Being without beginning, devoid of any qualities, the Supreme Self, imperishable, though dwelling in the body, O Arjuna, neither acts nor is tainted."
  },
  {
   "chapter": 13,
-  "number": 33,
+  "number": 32,
   "transliteration": "yathā sarva-gataṁ saukṣhmyād ākāśhaṁ nopalipyate\nsarvatrāvasthito dehe tathātmā nopalipyate",
   "meaning": "As the all-pervading ether is not tainted, due to its subtlety, so the Self seated everywhere in the body is not tainted either."
  },
  {
   "chapter": 13,
-  "number": 34,
+  "number": 33,
   "transliteration": "yathā prakāśhayaty ekaḥ kṛitsnaṁ lokam imaṁ raviḥ\nkṣhetraṁ kṣhetrī tathā kṛitsnaṁ prakāśhayati bhārata",
   "meaning": "Just as the one sun illuminates the entire world, so too does the Lord of the field (Supreme Self) illuminate the entire field, O Arjuna."
  },
  {
   "chapter": 13,
-  "number": 35,
+  "number": 34,
   "transliteration": "kṣhetra-kṣhetrajñayor evam antaraṁ jñāna-chakṣhuṣhā\nbhūta-prakṛiti-mokṣhaṁ cha ye vidur yānti te param",
   "meaning": "They who, by the eye of knowledge, perceive the distinction between the field and its knower, as well as the liberation from the Nature of being, go to the Supreme."
  },

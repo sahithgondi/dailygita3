@@ -8,8 +8,28 @@ final class ContentLoaderTests: XCTestCase {
     private let shlokas = ContentLoader().load()
 
     func testLoadsAllShlokas() {
-        // The gita/gita dataset numbers the Gita as 701 shlokas (see Tools/fetch-content/README.md).
+        // 700 traditionally-numbered shlokas + the chapter-13 variant verse (13.0) = 701 records.
         XCTAssertEqual(shlokas.count, 701)
+    }
+
+    func testChapter13VariantNumbering() {
+        let store = ContentStore(shlokas: shlokas)
+        let ch13 = store.shlokas(inChapter: 13)
+        // Renumbered so Arjuna's question is 13.0 and the rest keep canonical numbers (13.1…13.34).
+        XCTAssertEqual(ch13.map(\.number), Array(0...34))
+
+        let variant = store.shloka(id: "13.0")
+        XCTAssertNotNil(variant?.note, "13.0 should carry the textual-variant note")
+        XCTAssertTrue(variant?.transliteration.contains("arjuna uvācha") ?? false)
+
+        // The traditional opening verse is now 13.1, and it alone has no note.
+        let opening = store.shloka(id: "13.1")
+        XCTAssertNil(opening?.note)
+        XCTAssertTrue(opening?.transliteration.contains("idaṁ śharīraṁ") ?? false)
+    }
+
+    func testOnlyTheVariantVerseHasANote() {
+        XCTAssertEqual(shlokas.filter { $0.note != nil }.map(\.id), ["13.0"])
     }
 
     func testCoversAllEighteenChapters() {

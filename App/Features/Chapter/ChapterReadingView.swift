@@ -19,7 +19,8 @@ struct ChapterReadingView: View {
         ScrollViewReader { proxy in
             List {
                 if shlokas.isEmpty {
-                    // Phase 0: chapters without sample shlokas read as empty (real content is Phase 1).
+                    // Safety fallback only: with real content bundled, every chapter (1…18) is
+                    // populated. This would show solely if gita.json failed to load.
                     Text("No shlokas bundled for this chapter yet.")
                         .foregroundStyle(.secondary)
                 } else {

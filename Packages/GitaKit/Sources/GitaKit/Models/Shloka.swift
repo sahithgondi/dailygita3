@@ -14,12 +14,16 @@ public struct Shloka: Codable, Identifiable, Hashable, Sendable {
     public let transliteration: String
     /// Plain-English meaning shown underneath the transliteration.
     public let meaning: String
+    /// Optional editorial footnote. Used for the rare textual-variant verse (chapter 13's opening
+    /// question, numbered 13.0 — see `ContentLoader` / Tools/fetch-content). `nil` for all others.
+    public let note: String?
 
-    public init(chapter: Int, number: Int, transliteration: String, meaning: String) {
+    public init(chapter: Int, number: Int, transliteration: String, meaning: String, note: String? = nil) {
         self.chapter = chapter
         self.number = number
         self.transliteration = transliteration
         self.meaning = meaning
+        self.note = note
     }
 
     /// Stable identity used as the key for bookmarks/notes and the App Group payload: "<chapter>.<number>".

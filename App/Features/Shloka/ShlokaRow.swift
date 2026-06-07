@@ -38,6 +38,13 @@ struct ShlokaRow: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
+            if let note = shloka.note {
+                Text(note)
+                    .font(.caption2)
+                    .italic()
+                    .foregroundStyle(.secondary)
+            }
+
             HStack(spacing: 20) {
                 Button {
                     try? model.userStore.toggleBookmark(shlokaID: shloka.id)

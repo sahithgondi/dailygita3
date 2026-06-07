@@ -37,6 +37,16 @@ TRANSLATION_URL = f"{BASE}/translation.json"
 MEANING_AUTHOR = "Swami Sivananda"
 MEANING_LANG = "english"
 
+# Chapter 13 textual variant: the dataset opens chapter 13 with Arjuna's question, which is absent
+# from some recensions (e.g. the one Adi Shankara commented on, giving the traditional 700-verse
+# count). We keep that verse but number it 13.0 so the remaining verses retain their canonical
+# numbers (13.1 = "idaṁ śharīraṁ…"), matching how every other Gita reference numbers chapter 13.
+VARIANT_CHAPTER = 13
+VARIANT_NOTE = (
+    "This opening verse — Arjuna's question — is not found in all recensions of the Gita. "
+    "It is numbered 13.0 here so the remaining verses keep their traditional numbers."
+)
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUT = REPO_ROOT / "Packages/GitaKit/Sources/GitaKit/Resources/gita.json"
 
@@ -72,12 +82,18 @@ def build(verses, translations) -> list[dict]:
         if not meaning:
             missing.append(v["id"])
             continue
-        shlokas.append({
-            "chapter": v["chapter_number"],
-            "number": v["verse_number"],
+        chapter = v["chapter_number"]
+        number = v["verse_number"]
+        record = {
+            "chapter": chapter,
+            # Shift chapter 13 down by one so Arjuna's question becomes 13.0 (see VARIANT_NOTE).
+            "number": number - 1 if chapter == VARIANT_CHAPTER else number,
             "transliteration": clean(v["transliteration"]),
             "meaning": meaning,
-        })
+        }
+        if chapter == VARIANT_CHAPTER and record["number"] == 0:
+            record["note"] = VARIANT_NOTE
+        shlokas.append(record)
 
     if missing:
         raise SystemExit(f"FATAL: {len(missing)} verses missing a '{MEANING_AUTHOR}' translation: {missing[:10]}…")

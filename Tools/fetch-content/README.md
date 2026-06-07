@@ -46,5 +46,10 @@ isn't 18 or any verse is missing a Sivananda translation.
 
 ## Output facts
 
-- **701 shlokas** across all 18 chapters. (The traditional count is 700; this dataset numbers
-  chapter 13 with one extra verse — we keep the source's numbering verbatim.)
+- **700 traditionally-numbered shlokas + 1 textual variant = 701 records**, across all 18 chapters.
+- The variant is **chapter 13's opening verse (Arjuna's question)**, which is absent from some
+  recensions (e.g. the one Adi Shankara commented on, giving the canonical 700). We keep it but
+  number it **13.0**, so every other chapter-13 verse retains its traditional number
+  (13.1 = *idaṁ śharīraṁ…*), matching how other Gita references number the chapter.
+- The 13.0 record carries a `note` field explaining this; it is the only record with a note. The
+  app shows that note as a small footnote under the verse.
