@@ -1,0 +1,41 @@
+name: CI
+
+# Build + unit tests on every push/PR (impl plan §8). No signing needed — we build for the iOS
+# Simulator and disable code signing, so the public repo's CI needs no secrets.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gitakit-tests:
+    name: GitaKit unit tests
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test GitaKit (iOS Simulator)
+        working-directory: Packages/GitaKit
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -scheme GitaKit \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -resultBundlePath GitaKit.xcresult
+
+  app-build:
+    name: Build app + widget
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app + widget (no signing)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project dailygita3/dailygita3.xcodeproj \
+            -scheme dailygita3 \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGNING_ALLOWED=NO

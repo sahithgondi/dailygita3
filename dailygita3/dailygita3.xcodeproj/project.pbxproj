@@ -1,0 +1,944 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89AC16EE2FD6287600257492 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E72FD6287600257492 /* RootView.swift */; };
+		89AC16EF2FD6287600257492 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E22FD6287600257492 /* SettingsView.swift */; };
+		89AC16F02FD6287600257492 /* DailyGitaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16EC2FD6287600257492 /* DailyGitaApp.swift */; };
+		89AC16F12FD6287600257492 /* ChapterReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16D62FD6287600257492 /* ChapterReadingView.swift */; };
+		89AC16F22FD6287600257492 /* ChapterJumpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16D82FD6287600257492 /* ChapterJumpView.swift */; };
+		89AC16F32FD6287600257492 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E82FD6287600257492 /* Route.swift */; };
+		89AC16F42FD6287600257492 /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DE2FD6287600257492 /* NoteEditorView.swift */; };
+		89AC16F52FD6287600257492 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E02FD6287600257492 /* OnboardingView.swift */; };
+		89AC16F62FD6287600257492 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16D42FD6287600257492 /* BookmarksView.swift */; };
+		89AC16F72FD6287600257492 /* ShlokaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E42FD6287600257492 /* ShlokaRow.swift */; };
+		89AC16F82FD6287600257492 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16EA2FD6287600257492 /* AppModel.swift */; };
+		89AC16F92FD6287600257492 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DC2FD6287600257492 /* HomeView.swift */; };
+		89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DA2FD6287600257492 /* TransliterationGuideView.swift */; };
+		89AC17022FD628F000257492 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AC17012FD628F000257492 /* WidgetKit.framework */; };
+		89AC17042FD628F000257492 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AC17032FD628F000257492 /* SwiftUI.framework */; };
+		89AC17152FD628F100257492 /* dailygitawidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 89AC16FF2FD628F000257492 /* dailygitawidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		89AC17282FD6297400257492 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC17252FD6297400257492 /* Provider.swift */; };
+		89AC17292FD6297400257492 /* WidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC17262FD6297400257492 /* WidgetViews.swift */; };
+		89AC172A2FD6297400257492 /* DailyGitaWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC17242FD6297400257492 /* DailyGitaWidget.swift */; };
+		89AC172D2FD62AC900257492 /* GitaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC172C2FD62AC900257492 /* GitaKit */; };
+		89AC172F2FD62B6D00257492 /* GitaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89AC172E2FD62B6D00257492 /* GitaKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89AC16B82FD626FC00257492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89AC16A22FD626FA00257492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89AC16A92FD626FA00257492;
+			remoteInfo = dailygita3;
+		};
+		89AC16C22FD626FC00257492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89AC16A22FD626FA00257492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89AC16A92FD626FA00257492;
+			remoteInfo = dailygita3;
+		};
+		89AC17132FD628F100257492 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89AC16A22FD626FA00257492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89AC16FE2FD628F000257492;
+			remoteInfo = dailygitawidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89AC171A2FD628F100257492 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				89AC17152FD628F100257492 /* dailygitawidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		89AC16AA2FD626FA00257492 /* dailygita3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dailygita3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89AC16B72FD626FC00257492 /* dailygita3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dailygita3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89AC16C12FD626FC00257492 /* dailygita3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dailygita3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89AC16D42FD6287600257492 /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
+		89AC16D62FD6287600257492 /* ChapterReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterReadingView.swift; sourceTree = "<group>"; };
+		89AC16D82FD6287600257492 /* ChapterJumpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterJumpView.swift; sourceTree = "<group>"; };
+		89AC16DA2FD6287600257492 /* TransliterationGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransliterationGuideView.swift; sourceTree = "<group>"; };
+		89AC16DC2FD6287600257492 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		89AC16DE2FD6287600257492 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
+		89AC16E02FD6287600257492 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		89AC16E22FD6287600257492 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		89AC16E42FD6287600257492 /* ShlokaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShlokaRow.swift; sourceTree = "<group>"; };
+		89AC16E72FD6287600257492 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		89AC16E82FD6287600257492 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		89AC16EA2FD6287600257492 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		89AC16EB2FD6287600257492 /* DailyGita.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyGita.entitlements; sourceTree = "<group>"; };
+		89AC16EC2FD6287600257492 /* DailyGitaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGitaApp.swift; sourceTree = "<group>"; };
+		89AC16FF2FD628F000257492 /* dailygitawidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = dailygitawidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		89AC17012FD628F000257492 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		89AC17032FD628F000257492 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		89AC17232FD6297400257492 /* DailyGitaWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyGitaWidget.entitlements; sourceTree = "<group>"; };
+		89AC17242FD6297400257492 /* DailyGitaWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGitaWidget.swift; sourceTree = "<group>"; };
+		89AC17252FD6297400257492 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		89AC17262FD6297400257492 /* WidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViews.swift; sourceTree = "<group>"; };
+		89AC17312FD62F0B00257492 /* dailygitawidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dailygitawidgetExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		89AC17162FD628F100257492 /* Exceptions for "dailygitawidget" folder in "dailygitawidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 89AC16FE2FD628F000257492 /* dailygitawidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		89AC16AC2FD626FA00257492 /* dailygita3 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = dailygita3;
+			sourceTree = "<group>";
+		};
+		89AC16BA2FD626FC00257492 /* dailygita3Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = dailygita3Tests;
+			sourceTree = "<group>";
+		};
+		89AC16C42FD626FC00257492 /* dailygita3UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = dailygita3UITests;
+			sourceTree = "<group>";
+		};
+		89AC17052FD628F000257492 /* dailygitawidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				89AC17162FD628F100257492 /* Exceptions for "dailygitawidget" folder in "dailygitawidgetExtension" target */,
+			);
+			path = dailygitawidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89AC16A72FD626FA00257492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AC172D2FD62AC900257492 /* GitaKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16B42FD626FC00257492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16BE2FD626FC00257492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16FC2FD628F000257492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AC172F2FD62B6D00257492 /* GitaKit in Frameworks */,
+				89AC17042FD628F000257492 /* SwiftUI.framework in Frameworks */,
+				89AC17022FD628F000257492 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89AC16A12FD626FA00257492 = {
+			isa = PBXGroup;
+			children = (
+				89AC17312FD62F0B00257492 /* dailygitawidgetExtension.entitlements */,
+				89AC17272FD6297400257492 /* Widget */,
+				89AC16ED2FD6287600257492 /* App */,
+				89AC16AC2FD626FA00257492 /* dailygita3 */,
+				89AC16BA2FD626FC00257492 /* dailygita3Tests */,
+				89AC16C42FD626FC00257492 /* dailygita3UITests */,
+				89AC17052FD628F000257492 /* dailygitawidget */,
+				89AC17002FD628F000257492 /* Frameworks */,
+				89AC16AB2FD626FA00257492 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89AC16AB2FD626FA00257492 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16AA2FD626FA00257492 /* dailygita3.app */,
+				89AC16B72FD626FC00257492 /* dailygita3Tests.xctest */,
+				89AC16C12FD626FC00257492 /* dailygita3UITests.xctest */,
+				89AC16FF2FD628F000257492 /* dailygitawidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89AC16D52FD6287600257492 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16D42FD6287600257492 /* BookmarksView.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		89AC16D72FD6287600257492 /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16D62FD6287600257492 /* ChapterReadingView.swift */,
+			);
+			path = Chapter;
+			sourceTree = "<group>";
+		};
+		89AC16D92FD6287600257492 /* ChapterJump */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16D82FD6287600257492 /* ChapterJumpView.swift */,
+			);
+			path = ChapterJump;
+			sourceTree = "<group>";
+		};
+		89AC16DB2FD6287600257492 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16DA2FD6287600257492 /* TransliterationGuideView.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		89AC16DD2FD6287600257492 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16DC2FD6287600257492 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		89AC16DF2FD6287600257492 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16DE2FD6287600257492 /* NoteEditorView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		89AC16E12FD6287600257492 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16E02FD6287600257492 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		89AC16E32FD6287600257492 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16E22FD6287600257492 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		89AC16E52FD6287600257492 /* Shloka */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16E42FD6287600257492 /* ShlokaRow.swift */,
+			);
+			path = Shloka;
+			sourceTree = "<group>";
+		};
+		89AC16E62FD6287600257492 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16D52FD6287600257492 /* Bookmarks */,
+				89AC16D72FD6287600257492 /* Chapter */,
+				89AC16D92FD6287600257492 /* ChapterJump */,
+				89AC16DB2FD6287600257492 /* Guide */,
+				89AC16DD2FD6287600257492 /* Home */,
+				89AC16DF2FD6287600257492 /* Notes */,
+				89AC16E12FD6287600257492 /* Onboarding */,
+				89AC16E32FD6287600257492 /* Settings */,
+				89AC16E52FD6287600257492 /* Shloka */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		89AC16E92FD6287600257492 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16E72FD6287600257492 /* RootView.swift */,
+				89AC16E82FD6287600257492 /* Route.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		89AC16ED2FD6287600257492 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				89AC16E62FD6287600257492 /* Features */,
+				89AC16E92FD6287600257492 /* Navigation */,
+				89AC16EA2FD6287600257492 /* AppModel.swift */,
+				89AC16EB2FD6287600257492 /* DailyGita.entitlements */,
+				89AC16EC2FD6287600257492 /* DailyGitaApp.swift */,
+			);
+			name = App;
+			path = ../App;
+			sourceTree = SOURCE_ROOT;
+		};
+		89AC17002FD628F000257492 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89AC17012FD628F000257492 /* WidgetKit.framework */,
+				89AC17032FD628F000257492 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89AC17272FD6297400257492 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				89AC17232FD6297400257492 /* DailyGitaWidget.entitlements */,
+				89AC17242FD6297400257492 /* DailyGitaWidget.swift */,
+				89AC17252FD6297400257492 /* Provider.swift */,
+				89AC17262FD6297400257492 /* WidgetViews.swift */,
+			);
+			name = Widget;
+			path = ../Widget;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89AC16A92FD626FA00257492 /* dailygita3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89AC16CB2FD626FC00257492 /* Build configuration list for PBXNativeTarget "dailygita3" */;
+			buildPhases = (
+				89AC16A62FD626FA00257492 /* Sources */,
+				89AC16A72FD626FA00257492 /* Frameworks */,
+				89AC16A82FD626FA00257492 /* Resources */,
+				89AC171A2FD628F100257492 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89AC17142FD628F100257492 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				89AC16AC2FD626FA00257492 /* dailygita3 */,
+			);
+			name = dailygita3;
+			packageProductDependencies = (
+				89AC172C2FD62AC900257492 /* GitaKit */,
+			);
+			productName = dailygita3;
+			productReference = 89AC16AA2FD626FA00257492 /* dailygita3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89AC16B62FD626FC00257492 /* dailygita3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89AC16CE2FD626FC00257492 /* Build configuration list for PBXNativeTarget "dailygita3Tests" */;
+			buildPhases = (
+				89AC16B32FD626FC00257492 /* Sources */,
+				89AC16B42FD626FC00257492 /* Frameworks */,
+				89AC16B52FD626FC00257492 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89AC16B92FD626FC00257492 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				89AC16BA2FD626FC00257492 /* dailygita3Tests */,
+			);
+			name = dailygita3Tests;
+			packageProductDependencies = (
+			);
+			productName = dailygita3Tests;
+			productReference = 89AC16B72FD626FC00257492 /* dailygita3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89AC16C02FD626FC00257492 /* dailygita3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89AC16D12FD626FC00257492 /* Build configuration list for PBXNativeTarget "dailygita3UITests" */;
+			buildPhases = (
+				89AC16BD2FD626FC00257492 /* Sources */,
+				89AC16BE2FD626FC00257492 /* Frameworks */,
+				89AC16BF2FD626FC00257492 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89AC16C32FD626FC00257492 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				89AC16C42FD626FC00257492 /* dailygita3UITests */,
+			);
+			name = dailygita3UITests;
+			packageProductDependencies = (
+			);
+			productName = dailygita3UITests;
+			productReference = 89AC16C12FD626FC00257492 /* dailygita3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		89AC16FE2FD628F000257492 /* dailygitawidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89AC17172FD628F100257492 /* Build configuration list for PBXNativeTarget "dailygitawidgetExtension" */;
+			buildPhases = (
+				89AC16FB2FD628F000257492 /* Sources */,
+				89AC16FC2FD628F000257492 /* Frameworks */,
+				89AC16FD2FD628F000257492 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				89AC17052FD628F000257492 /* dailygitawidget */,
+			);
+			name = dailygitawidgetExtension;
+			packageProductDependencies = (
+				89AC172E2FD62B6D00257492 /* GitaKit */,
+			);
+			productName = dailygitawidgetExtension;
+			productReference = 89AC16FF2FD628F000257492 /* dailygitawidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89AC16A22FD626FA00257492 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					89AC16A92FD626FA00257492 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					89AC16B62FD626FC00257492 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 89AC16A92FD626FA00257492;
+					};
+					89AC16C02FD626FC00257492 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 89AC16A92FD626FA00257492;
+					};
+					89AC16FE2FD628F000257492 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = 89AC16A52FD626FA00257492 /* Build configuration list for PBXProject "dailygita3" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89AC16A12FD626FA00257492;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				89AC172B2FD62AC900257492 /* XCLocalSwiftPackageReference "../Packages/GitaKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 89AC16AB2FD626FA00257492 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89AC16A92FD626FA00257492 /* dailygita3 */,
+				89AC16B62FD626FC00257492 /* dailygita3Tests */,
+				89AC16C02FD626FC00257492 /* dailygita3UITests */,
+				89AC16FE2FD628F000257492 /* dailygitawidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89AC16A82FD626FA00257492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16B52FD626FC00257492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16BF2FD626FC00257492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16FD2FD628F000257492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89AC16A62FD626FA00257492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AC16EE2FD6287600257492 /* RootView.swift in Sources */,
+				89AC16EF2FD6287600257492 /* SettingsView.swift in Sources */,
+				89AC16F02FD6287600257492 /* DailyGitaApp.swift in Sources */,
+				89AC16F12FD6287600257492 /* ChapterReadingView.swift in Sources */,
+				89AC16F22FD6287600257492 /* ChapterJumpView.swift in Sources */,
+				89AC16F32FD6287600257492 /* Route.swift in Sources */,
+				89AC16F42FD6287600257492 /* NoteEditorView.swift in Sources */,
+				89AC16F52FD6287600257492 /* OnboardingView.swift in Sources */,
+				89AC16F62FD6287600257492 /* BookmarksView.swift in Sources */,
+				89AC16F72FD6287600257492 /* ShlokaRow.swift in Sources */,
+				89AC16F82FD6287600257492 /* AppModel.swift in Sources */,
+				89AC16F92FD6287600257492 /* HomeView.swift in Sources */,
+				89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16B32FD626FC00257492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16BD2FD626FC00257492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89AC16FB2FD628F000257492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AC17282FD6297400257492 /* Provider.swift in Sources */,
+				89AC17292FD6297400257492 /* WidgetViews.swift in Sources */,
+				89AC172A2FD6297400257492 /* DailyGitaWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89AC16B92FD626FC00257492 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89AC16A92FD626FA00257492 /* dailygita3 */;
+			targetProxy = 89AC16B82FD626FC00257492 /* PBXContainerItemProxy */;
+		};
+		89AC16C32FD626FC00257492 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89AC16A92FD626FA00257492 /* dailygita3 */;
+			targetProxy = 89AC16C22FD626FC00257492 /* PBXContainerItemProxy */;
+		};
+		89AC17142FD628F100257492 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89AC16FE2FD628F000257492 /* dailygitawidgetExtension */;
+			targetProxy = 89AC17132FD628F100257492 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		89AC16C92FD626FC00257492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89AC16CA2FD626FC00257492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89AC16CC2FD626FC00257492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dailygita3/dailygita3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 682SR3N922;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sahithgondi.dailygita;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89AC16CD2FD626FC00257492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dailygita3/dailygita3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 682SR3N922;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sahithgondi.dailygita;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		89AC16CF2FD626FC00257492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailygita.dailygita3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dailygita3.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/dailygita3";
+			};
+			name = Debug;
+		};
+		89AC16D02FD626FC00257492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailygita.dailygita3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dailygita3.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/dailygita3";
+			};
+			name = Release;
+		};
+		89AC16D22FD626FC00257492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailygita.dailygita3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = dailygita3;
+			};
+			name = Debug;
+		};
+		89AC16D32FD626FC00257492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dailygita.dailygita3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = dailygita3;
+			};
+			name = Release;
+		};
+		89AC17182FD628F100257492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = dailygitawidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 682SR3N922;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dailygitawidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = dailygitawidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sahithgondi.dailygita.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89AC17192FD628F100257492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = dailygitawidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 682SR3N922;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = dailygitawidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = dailygitawidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sahithgondi.dailygita.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89AC16A52FD626FA00257492 /* Build configuration list for PBXProject "dailygita3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89AC16C92FD626FC00257492 /* Debug */,
+				89AC16CA2FD626FC00257492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89AC16CB2FD626FC00257492 /* Build configuration list for PBXNativeTarget "dailygita3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89AC16CC2FD626FC00257492 /* Debug */,
+				89AC16CD2FD626FC00257492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89AC16CE2FD626FC00257492 /* Build configuration list for PBXNativeTarget "dailygita3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89AC16CF2FD626FC00257492 /* Debug */,
+				89AC16D02FD626FC00257492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89AC16D12FD626FC00257492 /* Build configuration list for PBXNativeTarget "dailygita3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89AC16D22FD626FC00257492 /* Debug */,
+				89AC16D32FD626FC00257492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89AC17172FD628F100257492 /* Build configuration list for PBXNativeTarget "dailygitawidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89AC17182FD628F100257492 /* Debug */,
+				89AC17192FD628F100257492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		89AC172B2FD62AC900257492 /* XCLocalSwiftPackageReference "../Packages/GitaKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Packages/GitaKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89AC172C2FD62AC900257492 /* GitaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GitaKit;
+		};
+		89AC172E2FD62B6D00257492 /* GitaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89AC172B2FD62AC900257492 /* XCLocalSwiftPackageReference "../Packages/GitaKit" */;
+			productName = GitaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 89AC16A22FD626FA00257492 /* Project object */;
+}

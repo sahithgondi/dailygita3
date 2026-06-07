@@ -1,0 +1,22 @@
+# Project instructions & planning docs — local only, not published (impl plan §10, CLAUDE.md §7)
+CLAUDE.md
+gita-prd.md
+gita-pages.md
+gita-security.md
+gita-ui.md
+gita-implementation-plan.md
+# The planning docs currently live in files/ — keep that whole folder out of the public repo.
+files/
+
+# Secrets / build-time content pipeline (gita-security.md §5)
+.env
+*.env
+Tools/fetch-content/.secrets
+
+# Xcode / Swift
+*.xcuserstate
+xcuserdata/
+.DS_Store
+.build/
+DerivedData/
+*.xcresult
