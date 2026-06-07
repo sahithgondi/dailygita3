@@ -20,8 +20,8 @@ final class AppModel {
         self.dailyService = dailyService
     }
 
-    /// All chapters the app offers. v1 is the full Gita (1...18); the Phase 0 content store only has
-    /// sample shlokas for a few of them, so chapters without samples read as an empty chapter.
+    /// All chapters the app offers — the full Gita (1...18), every chapter populated from the
+    /// bundled content (gita.json).
     let allChapters = Array(1...18)
 
     var todayShloka: Shloka? {

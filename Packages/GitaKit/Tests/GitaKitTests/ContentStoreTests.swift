@@ -26,8 +26,4 @@ final class ContentStoreTests: XCTestCase {
     func testReferenceFormat() {
         XCTAssertEqual(store.shloka(id: "18.66")?.reference, "18.66")
     }
-
-    func testContentLoaderReturnsSamplesInPhase0() {
-        XCTAssertEqual(ContentLoader().load(), ContentStore.sampleShlokas)
-    }
 }

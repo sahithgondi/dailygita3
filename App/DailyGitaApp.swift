@@ -9,7 +9,8 @@ struct DailyGitaApp: App {
     @State private var model: AppModel
 
     init() {
-        let content = ContentStore()
+        // Real content: all 701 shlokas decoded from the bundled gita.json (impl plan §7 Milestone 1).
+        let content = ContentStore(shlokas: ContentLoader().load())
         let user: UserStore
         do {
             user = try UserStore()
