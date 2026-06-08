@@ -30,7 +30,7 @@ public enum TransliterationGuide {
 
     public static let entries: [TransliterationEntry] = [
         // ── Page 1, left column: oṁ + vowels + ka-varga ──────────────────────────────
-        .init("ॐ", "om", "Home", underline: "Ho"),
+        .init("ॐ", "om", "Home", underline: "ome"),
         .init("अ", "a", "Fun", underline: "u"),
         .init("आ", "ā", "Car", underline: "a"),
         .init("इ", "i", "Pin", underline: "i"),
@@ -53,7 +53,6 @@ public enum TransliterationGuide {
         .init("ङ", "ṅa", "Sing", underline: "ng"),
 
         // ── Page 1, right column: ṭa-varga + ta-varga + pa-varga + semivowels + śa ────
-        .init("ॐ", "om", "Rome", underline: "ome"),
         .init("ट", "ṭa", "Touch", underline: "T"),
         .init("ठ", "ṭha", "Ant-hill", underline: "t-h"),
         .init("ड", "ḍa", "Duck", underline: "D"),
