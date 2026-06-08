@@ -15,7 +15,18 @@ struct HomeView: View {
 
             Section("Chapters") {
                 ForEach(model.allChapters, id: \.self) { chapter in
-                    Button("Chapter \(chapter)") { path.append(.chapter(chapter)) }
+                    Button { path.append(.chapter(chapter)) } label: {
+                        if let info = GitaChapters.chapter(chapter) {
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text("\(chapter). \(info.name)")
+                                Text(info.englishName)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        } else {
+                            Text("Chapter \(chapter)")
+                        }
+                    }
                 }
             }
 

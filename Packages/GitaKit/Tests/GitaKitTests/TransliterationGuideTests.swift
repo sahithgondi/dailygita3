@@ -7,8 +7,10 @@ final class TransliterationGuideTests: XCTestCase {
     private let entries = TransliterationGuide.entries
 
     func testEntryCountMatchesChart() {
-        // 21 (page 1 left) + 21 (page 1 right) + 7 (page 2 left) + 7 (page 2 right) = 56 rows.
-        XCTAssertEqual(entries.count, 56)
+        // 21 (page 1 left) + 20 (page 1 right) + 7 (page 2 left) + 7 (page 2 right) = 55 rows.
+        // Page-1 right is 20, not 21: the duplicate oṁ row that once sat there was removed (it already
+        // appears at the top of page-1 left).
+        XCTAssertEqual(entries.count, 55)
     }
 
     func testEveryUnderlineSubstringOccursInItsExample() {

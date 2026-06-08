@@ -12,12 +12,26 @@ struct ChapterReadingView: View {
     @Environment(AppModel.self) private var model
 
     private var shlokas: [Shloka] { model.contentStore.shlokas(inChapter: chapter) }
+    private var info: ChapterInfo? { GitaChapters.chapter(chapter) }
     private var hasPrevious: Bool { chapter > (model.allChapters.first ?? 1) }
     private var hasNext: Bool { chapter < (model.allChapters.last ?? 18) }
 
     var body: some View {
         ScrollViewReader { proxy in
             List {
+                // Chapter heading (gita-pages.md §5): number + transliterated name + English gloss.
+                // A normal scrolling row (not a sticky section header) so scroll position feels
+                // natural across chapters.
+                if let info {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Chapter \(chapter) · \(info.name)")
+                            .font(.headline)
+                        Text(info.englishName)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
                 if shlokas.isEmpty {
                     // Safety fallback only: with real content bundled, every chapter (1…18) is
                     // populated. This would show solely if gita.json failed to load.
