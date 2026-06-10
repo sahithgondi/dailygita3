@@ -18,32 +18,26 @@ struct ChapterReadingView: View {
 
     var body: some View {
         ScrollViewReader { proxy in
-            List {
-                // Chapter heading (gita-pages.md §5): number + transliterated name + English gloss.
-                // A normal scrolling row (not a sticky section header) so scroll position feels
-                // natural across chapters.
-                if let info {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Chapter \(chapter) · \(info.name)")
-                            .font(.headline)
-                        Text(info.englishName)
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                    }
-                }
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: Theme.cardSpacing) {
+                    if let info { heading(info) }
 
-                if shlokas.isEmpty {
-                    // Safety fallback only: with real content bundled, every chapter (1…18) is
-                    // populated. This would show solely if gita.json failed to load.
-                    Text("No shlokas bundled for this chapter yet.")
-                        .foregroundStyle(.secondary)
-                } else {
-                    ForEach(shlokas) { shloka in
-                        ShlokaRow(shloka: shloka)
-                            .id(shloka.id)
+                    if shlokas.isEmpty {
+                        // Safety fallback only: with real content bundled, every chapter (1…18) is
+                        // populated. This would show solely if gita.json failed to load.
+                        Text("No shlokas bundled for this chapter yet.")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(shlokas) { shloka in
+                            ShlokaCard(shloka: shloka)
+                                .id(shloka.id)
+                        }
                     }
                 }
+                .padding(.horizontal, Theme.screenMargin)
+                .padding(.vertical, Theme.cardSpacing)
             }
+            .background(Theme.pageBackground)
             .onAppear {
                 if let id = focusShlokaID { proxy.scrollTo(id, anchor: .top) }
             }
@@ -64,15 +58,30 @@ struct ChapterReadingView: View {
                     .accessibilityLabel("Next chapter")
             }
         }
-        // Horizontal swipe: left → next chapter, right → previous (gita-pages.md §5).
-        .gesture(
+        // Horizontal swipe: left → next chapter, right → previous (gita-pages.md §5). Simultaneous so
+        // the vertical ScrollView keeps working; the guard only acts on horizontal-dominant swipes.
+        .simultaneousGesture(
             DragGesture(minimumDistance: 40)
                 .onEnded { value in
-                    guard abs(value.translation.width) > abs(value.translation.height) else { return }
+                    guard abs(value.translation.width) > 2 * abs(value.translation.height) else { return }
                     if value.translation.width < 0 { go(to: chapter + 1) }
                     else { go(to: chapter - 1) }
                 }
         )
+    }
+
+    /// Chapter heading (gita-pages.md §5): number + transliterated name + English gloss.
+    @ViewBuilder
+    private func heading(_ info: ChapterInfo) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text("Chapter \(chapter) · \(info.name)")
+                .font(.title3.weight(.semibold))
+            Text(info.englishName)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.bottom, 4)
     }
 
     /// Replace the top of the stack with the adjacent chapter so the back stack doesn't grow as the

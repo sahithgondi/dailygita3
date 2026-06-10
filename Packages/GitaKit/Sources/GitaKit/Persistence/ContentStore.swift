@@ -26,23 +26,24 @@ public struct ContentStore: Sendable {
         Array(Set(shlokas.map(\.chapter))).sorted()
     }
 
-    /// Placeholder content for the Phase 0 shell. NOT the real text — just enough to wire the UI,
-    /// the daily-shloka selection, and the App Group payload before the real pipeline exists.
+    /// Safety fallback if `gita.json` is ever missing/unreadable (see `ContentLoader`). A handful of
+    /// real verses in the same padapātha + meaning format as the bundle, so the app still renders.
     public static let sampleShlokas: [Shloka] = [
         Shloka(chapter: 1, number: 1,
-               transliteration: "dharma-kṣetre kuru-kṣetre samavetā yuyutsavaḥ",
-               meaning: "(Placeholder) On the field of dharma, assembled and eager to fight…"),
+               speaker: "dhṛtarāṣṭra uvāca",
+               transliteration: "dharmakṣetre kurukṣetre\nsamavetā yuyutsavaḥ |\nmāmakāḥ pāṇḍavāścaiva\nkimakurvata sañjaya ||1||",
+               meaning: "Dhritarashtra said, \"What did my people and the sons of Pandu do when they had assembled together, eager for battle, on the holy plain of Kurukshetra, O Sanjaya?\""),
         Shloka(chapter: 2, number: 47,
-               transliteration: "karmaṇy-evādhikāras te mā phaleṣu kadācana",
-               meaning: "(Placeholder) You have a right to action alone, never to its fruits."),
+               transliteration: "karmaṇyevādhikāraste\nmā phaleṣu kadācana |\nmā karmaphalaheturbhūḥ\nmā te saṅgo'stvakarmaṇi ||47||",
+               meaning: "Your right is only to work, but not to its results; do not let the results of action be your motive, nor let your attachment be to inaction."),
         Shloka(chapter: 2, number: 48,
-               transliteration: "yoga-sthaḥ kuru karmāṇi saṅgaṁ tyaktvā dhanañjaya",
-               meaning: "(Placeholder) Established in yoga, perform action, abandoning attachment."),
+               transliteration: "yogasthaḥ kuru karmāṇi\nsaṅgaṁ tyaktvā dhanañjaya |\nsiddhyasiddhyoḥ samo bhūtvā\nsamatvaṁ yoga ucyate ||48||",
+               meaning: "Perform action, O Arjuna, being steadfast in yoga, abandoning attachment and balanced in success and failure; evenness of mind is called yoga."),
         Shloka(chapter: 9, number: 22,
-               transliteration: "ananyāś cintayanto māṁ ye janāḥ paryupāsate",
-               meaning: "(Placeholder) To those who worship Me with undivided focus, I carry what they lack."),
+               transliteration: "ananyāścintayanto māṁ\nye janāḥ paryupāsate |\nteṣāṁ nityābhiyuktānāṁ\nyogakṣemaṁ vahāmyaham ||22||",
+               meaning: "To those men who worship Me alone, thinking of no other, who are ever devoted, I secure what they lack and preserve what they already possess."),
         Shloka(chapter: 18, number: 66,
-               transliteration: "sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja",
-               meaning: "(Placeholder) Abandoning all duties, take refuge in Me alone."),
+               transliteration: "sarvadharmānparityajya\nmāmekaṁ śaraṇaṁ vraja |\nahaṁ tvā sarvapāpebhyaḥ\nmokṣayiṣyāmi mā śucaḥ ||66||",
+               meaning: "Abandoning all duties, take refuge in Me alone; I will liberate you from all sins; do not grieve."),
     ]
 }

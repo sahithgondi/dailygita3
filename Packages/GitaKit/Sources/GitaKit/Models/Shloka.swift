@@ -10,7 +10,11 @@ public struct Shloka: Codable, Identifiable, Hashable, Sendable {
     public let chapter: Int
     /// Shloka number within its chapter.
     public let number: Int
-    /// English transliteration (shown first — PRD §5.2).
+    /// The "<name> uvāca" speaker label when the verse opens a speech (e.g. "arjuna uvāca").
+    /// `nil` for the majority of verses, which continue an ongoing speech. Rendered above the pādas.
+    public let speaker: String?
+    /// IAST transliteration in padapātha form: one pāda (quarter-verse) per line, joined by "\n",
+    /// with daṇḍa marks baked in (`|` at the hemistich, `||N||` at the end). Shown first (PRD §5.2).
     public let transliteration: String
     /// Plain-English meaning shown underneath the transliteration.
     public let meaning: String
@@ -18,9 +22,11 @@ public struct Shloka: Codable, Identifiable, Hashable, Sendable {
     /// question, numbered 13.0 — see `ContentLoader` / Tools/fetch-content). `nil` for all others.
     public let note: String?
 
-    public init(chapter: Int, number: Int, transliteration: String, meaning: String, note: String? = nil) {
+    public init(chapter: Int, number: Int, speaker: String? = nil, transliteration: String,
+                meaning: String, note: String? = nil) {
         self.chapter = chapter
         self.number = number
+        self.speaker = speaker
         self.transliteration = transliteration
         self.meaning = meaning
         self.note = note
@@ -31,4 +37,8 @@ public struct Shloka: Codable, Identifiable, Hashable, Sendable {
 
     /// Human-facing reference, e.g. "2.47".
     public var reference: String { "\(chapter).\(number)" }
+
+    /// The pāda lines for padapātha rendering, split from `transliteration`. The view indents the
+    /// odd-indexed lines (the 2nd and 4th pādas), matching the traditional layout.
+    public var verseLines: [String] { transliteration.split(separator: "\n").map(String.init) }
 }

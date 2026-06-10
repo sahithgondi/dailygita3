@@ -16,7 +16,8 @@
 		89AC16F42FD6287600257492 /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DE2FD6287600257492 /* NoteEditorView.swift */; };
 		89AC16F52FD6287600257492 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E02FD6287600257492 /* OnboardingView.swift */; };
 		89AC16F62FD6287600257492 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16D42FD6287600257492 /* BookmarksView.swift */; };
-		89AC16F72FD6287600257492 /* ShlokaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E42FD6287600257492 /* ShlokaRow.swift */; };
+		89AC16F72FD6287600257492 /* ShlokaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E42FD6287600257492 /* ShlokaCard.swift */; };
+		89ABCD022FD6287600257492 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD012FD6287600257492 /* Theme.swift */; };
 		89AC16F82FD6287600257492 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16EA2FD6287600257492 /* AppModel.swift */; };
 		89AC16F92FD6287600257492 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DC2FD6287600257492 /* HomeView.swift */; };
 		89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DA2FD6287600257492 /* TransliterationGuideView.swift */; };
@@ -80,7 +81,8 @@
 		89AC16DE2FD6287600257492 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
 		89AC16E02FD6287600257492 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		89AC16E22FD6287600257492 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		89AC16E42FD6287600257492 /* ShlokaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShlokaRow.swift; sourceTree = "<group>"; };
+		89AC16E42FD6287600257492 /* ShlokaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShlokaCard.swift; sourceTree = "<group>"; };
+		89ABCD012FD6287600257492 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem/Theme.swift"; sourceTree = "<group>"; };
 		89AC16E72FD6287600257492 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		89AC16E82FD6287600257492 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		89AC16EA2FD6287600257492 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -261,7 +263,7 @@
 		89AC16E52FD6287600257492 /* Shloka */ = {
 			isa = PBXGroup;
 			children = (
-				89AC16E42FD6287600257492 /* ShlokaRow.swift */,
+				89AC16E42FD6287600257492 /* ShlokaCard.swift */,
 			);
 			path = Shloka;
 			sourceTree = "<group>";
@@ -296,6 +298,7 @@
 			children = (
 				89AC16E62FD6287600257492 /* Features */,
 				89AC16E92FD6287600257492 /* Navigation */,
+				89ABCD012FD6287600257492 /* Theme.swift */,
 				89AC16EA2FD6287600257492 /* AppModel.swift */,
 				89AC16EB2FD6287600257492 /* DailyGita.entitlements */,
 				89AC16EC2FD6287600257492 /* DailyGitaApp.swift */,
@@ -518,7 +521,8 @@
 				89AC16F42FD6287600257492 /* NoteEditorView.swift in Sources */,
 				89AC16F52FD6287600257492 /* OnboardingView.swift in Sources */,
 				89AC16F62FD6287600257492 /* BookmarksView.swift in Sources */,
-				89AC16F72FD6287600257492 /* ShlokaRow.swift in Sources */,
+				89AC16F72FD6287600257492 /* ShlokaCard.swift in Sources */,
+				89ABCD022FD6287600257492 /* Theme.swift in Sources */,
 				89AC16F82FD6287600257492 /* AppModel.swift in Sources */,
 				89AC16F92FD6287600257492 /* HomeView.swift in Sources */,
 				89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */,

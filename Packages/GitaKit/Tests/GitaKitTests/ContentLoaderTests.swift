@@ -20,12 +20,14 @@ final class ContentLoaderTests: XCTestCase {
 
         let variant = store.shloka(id: "13.0")
         XCTAssertNotNil(variant?.note, "13.0 should carry the textual-variant note")
-        XCTAssertTrue(variant?.transliteration.contains("arjuna uvācha") ?? false)
+        XCTAssertEqual(variant?.speaker, "arjuna uvāca")
+        XCTAssertTrue(variant?.transliteration.hasPrefix("prakṛtiṁ") ?? false)
 
         // The traditional opening verse is now 13.1, and it alone has no note.
         let opening = store.shloka(id: "13.1")
         XCTAssertNil(opening?.note)
-        XCTAssertTrue(opening?.transliteration.contains("idaṁ śharīraṁ") ?? false)
+        XCTAssertEqual(opening?.speaker, "śrī bhagavān uvāca")
+        XCTAssertTrue(opening?.transliteration.contains("idaṁ śarīraṁ") ?? false)
     }
 
     func testOnlyTheVariantVerseHasANote() {
@@ -64,5 +66,42 @@ final class ContentLoaderTests: XCTestCase {
     func testDidNotFallBackToSamples() {
         // The 5-item sample set must never be what ships; catch a missing/broken resource.
         XCTAssertNotEqual(shlokas, ContentStore.sampleShlokas)
+    }
+
+    // ── Padapātha / clean-IAST guards (the PDF-sourced transliteration) ──────────────────────────
+
+    func testEveryVerseEndsWithDandaNumber() {
+        for s in shlokas {
+            XCTAssertNotNil(
+                s.transliteration.range(of: #"\|\|\d+\|\|\s*$"#, options: .regularExpression),
+                "\(s.id) transliteration should end with a ||N|| marker: \(s.transliteration)"
+            )
+        }
+    }
+
+    func testTransliterationIsCleanIAST() {
+        // Legacy display-font cipher glyphs and the old extra-h romanization must never ship.
+        let forbidden = ["ä", "¹", "à", "ù", "º", "ç", "é", "ë", "å", "ï", "ü", "ö", "ì", "ò", "è",
+                         "kṣh", "śh", "ṛi", "uvācha"]
+        for s in shlokas {
+            let text = (s.speaker ?? "") + " " + s.transliteration
+            for g in forbidden {
+                XCTAssertFalse(text.contains(g), "\(s.id) contains forbidden glyph “\(g)”: \(text)")
+            }
+        }
+    }
+
+    func testSpeakerWhenPresentEndsInUvaca() {
+        for s in shlokas where s.speaker != nil {
+            XCTAssertTrue(s.speaker!.hasSuffix("uvāca"), "\(s.id) speaker is not a ‘… uvāca’ label: \(s.speaker!)")
+        }
+    }
+
+    func testVerseLinesSplitOnNewlines() {
+        // 1.1 is a standard 4-pāda verse.
+        let v = ContentStore(shlokas: shlokas).shloka(id: "1.1")
+        XCTAssertEqual(v?.verseLines.count, 4)
+        XCTAssertEqual(v?.verseLines.first, "dharmakṣetre kurukṣetre")
+        XCTAssertTrue(v?.verseLines.last?.hasSuffix("||1||") ?? false)
     }
 }
