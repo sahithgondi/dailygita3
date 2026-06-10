@@ -18,6 +18,8 @@
 		89AC16F62FD6287600257492 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16D42FD6287600257492 /* BookmarksView.swift */; };
 		89AC16F72FD6287600257492 /* ShlokaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16E42FD6287600257492 /* ShlokaCard.swift */; };
 		89ABCD022FD6287600257492 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD012FD6287600257492 /* Theme.swift */; };
+		89ABCD042FD6287600257492 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD032FD6287600257492 /* NotesView.swift */; };
+		89ABCD062FD6287600257492 /* VerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD052FD6287600257492 /* VerseView.swift */; };
 		89AC16F82FD6287600257492 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16EA2FD6287600257492 /* AppModel.swift */; };
 		89AC16F92FD6287600257492 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DC2FD6287600257492 /* HomeView.swift */; };
 		89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DA2FD6287600257492 /* TransliterationGuideView.swift */; };
@@ -83,6 +85,8 @@
 		89AC16E22FD6287600257492 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		89AC16E42FD6287600257492 /* ShlokaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShlokaCard.swift; sourceTree = "<group>"; };
 		89ABCD012FD6287600257492 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem/Theme.swift"; sourceTree = "<group>"; };
+		89ABCD032FD6287600257492 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		89ABCD052FD6287600257492 /* VerseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseView.swift; sourceTree = "<group>"; };
 		89AC16E72FD6287600257492 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		89AC16E82FD6287600257492 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		89AC16EA2FD6287600257492 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				89AC16DE2FD6287600257492 /* NoteEditorView.swift */,
+				89ABCD032FD6287600257492 /* NotesView.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				89AC16E42FD6287600257492 /* ShlokaCard.swift */,
+				89ABCD052FD6287600257492 /* VerseView.swift */,
 			);
 			path = Shloka;
 			sourceTree = "<group>";
@@ -523,6 +529,8 @@
 				89AC16F62FD6287600257492 /* BookmarksView.swift in Sources */,
 				89AC16F72FD6287600257492 /* ShlokaCard.swift in Sources */,
 				89ABCD022FD6287600257492 /* Theme.swift in Sources */,
+				89ABCD042FD6287600257492 /* NotesView.swift in Sources */,
+				89ABCD062FD6287600257492 /* VerseView.swift in Sources */,
 				89AC16F82FD6287600257492 /* AppModel.swift in Sources */,
 				89AC16F92FD6287600257492 /* HomeView.swift in Sources */,
 				89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */,
@@ -707,6 +715,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,6 +745,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

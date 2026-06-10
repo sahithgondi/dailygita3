@@ -32,6 +32,7 @@ struct HomeView: View {
 
             Section {
                 Button("Bookmarks") { path.append(.bookmarks) }
+                Button("Notes") { path.append(.notes) }
                 Button("Transliteration Guide") { path.append(.guide) }
                 Button("Jump to chapter") { path.append(.chapterJump) }
                 Button("Settings") { path.append(.settings) }
@@ -46,15 +47,18 @@ struct HomeView: View {
             Button {
                 path.append(.chapter(shloka.chapter))
             } label: {
-                VStack(alignment: .leading, spacing: 6) {
+                VStack(alignment: .leading, spacing: 8) {
                     Text("Today’s shloka")
                         .font(.caption)
-                    Text(shloka.transliteration)
-                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                    // Same padapātha rendering as the reading card.
+                    VerseView(shloka: shloka)
+                    Divider()
                     Text(shloka.meaning)
-                        .font(.subheadline)
+                        .font(Theme.meaningFont)
                     Text(shloka.reference)
-                        .font(.caption)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
                 }
             }
             .buttonStyle(.plain)

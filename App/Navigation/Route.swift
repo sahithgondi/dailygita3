@@ -6,6 +6,7 @@ import GitaKit
 enum Route: Hashable {
     case chapter(Int)
     case bookmarks
+    case notes
     case guide
     case settings
     case chapterJump

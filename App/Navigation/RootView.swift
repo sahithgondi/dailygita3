@@ -38,6 +38,8 @@ struct RootView: View {
             ChapterReadingView(chapter: chapter, focusShlokaID: shlokaID, path: $path)
         case .bookmarks:
             BookmarksView(path: $path)
+        case .notes:
+            NotesView(path: $path)
         case .guide:
             TransliterationGuideView()
         case .settings:

@@ -34,19 +34,7 @@ struct ShlokaCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: Theme.padaSpacing) {
-            if let speaker = shloka.speaker {
-                Text(speaker)
-                    .font(Theme.speakerFont)
-                    .padding(.bottom, 2)
-            }
-
-            // Padapātha: one pāda per line; indent the 2nd and 4th (odd indices).
-            ForEach(Array(shloka.verseLines.enumerated()), id: \.offset) { index, line in
-                Text(line)
-                    .font(Theme.verseFont)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, index.isMultiple(of: 2) ? 0 : Theme.padaIndent)
-            }
+            VerseView(shloka: shloka)
 
             Divider().padding(.vertical, 8)
 
@@ -54,11 +42,17 @@ struct ShlokaCard: View {
                 .font(Theme.meaningFont)
                 .foregroundStyle(.primary)
 
-            if let note = shloka.note {
-                Text(note)
+            // Editorial footnote (only the 13.0 textual variant).
+            if let editorialNote = shloka.note {
+                Text(editorialNote)
                     .font(.caption2)
                     .italic()
                     .foregroundStyle(.secondary)
+            }
+
+            // The reader's own note, shown inline so it's visible without opening the editor.
+            if let userNote = notes.first?.text, !userNote.isEmpty {
+                noteBlock(userNote)
             }
 
             Text(shloka.reference)
@@ -74,6 +68,22 @@ struct ShlokaCard: View {
         .sheet(isPresented: $showingNoteEditor) {
             NoteEditorView(shlokaID: shloka.id)
         }
+    }
+
+    /// The reader's personal note, rendered inline under the meaning in a subtle container so it's
+    /// distinct from the verse and the editorial footnote.
+    @ViewBuilder
+    private func noteBlock(_ text: String) -> some View {
+        HStack(alignment: .top, spacing: 6) {
+            Image(systemName: "note.text")
+            Text(text)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .font(.footnote)
+        .foregroundStyle(.secondary)
+        .padding(10)
+        .background(Theme.pageBackground, in: RoundedRectangle(cornerRadius: 8))
+        .padding(.top, 2)
     }
 
     /// Bookmark star + note marker, shown only when set, in the card's top-trailing corner.

@@ -27,7 +27,10 @@ struct BookmarksView: View {
                             } label: {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text(shloka.reference).font(.caption).foregroundStyle(.secondary)
-                                    Text(shloka.transliteration).font(.body)
+                                    // One-line snippet — the first pāda — not the whole verse block.
+                                    Text(shloka.verseLines.first ?? shloka.transliteration)
+                                        .font(.body)
+                                        .lineLimit(1)
                                 }
                             }
                             .buttonStyle(.plain)
