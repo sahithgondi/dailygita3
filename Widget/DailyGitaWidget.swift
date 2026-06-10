@@ -14,7 +14,7 @@ struct DailyGitaWidget: Widget {
         }
         .configurationDisplayName("Daily Gita")
         .description("The day’s shloka on your home and lock screen.")
-        .supportedFamilies([.systemSmall, .systemMedium, .accessoryRectangular, .accessoryInline])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .accessoryRectangular, .accessoryInline])
     }
 }
 

@@ -22,10 +22,17 @@ struct RootView: View {
                 OnboardingView(onFinish: { hasOnboarded = true })
             }
         }
-        // Keep the widget's daily shloka fresh whenever the app becomes active.
-        .task { model.publishDailyShlokaToWidget() }
+        // Keep the widget's daily shloka and the rolling notification window fresh whenever the app
+        // becomes active (so content/time stay correct as days pass).
+        .task {
+            model.publishDailyShlokaToWidget()
+            model.scheduleDailyNotifications()
+        }
         .onChange(of: scenePhase) { _, phase in
-            if phase == .active { model.publishDailyShlokaToWidget() }
+            if phase == .active {
+                model.publishDailyShlokaToWidget()
+                model.scheduleDailyNotifications()
+            }
         }
     }
 

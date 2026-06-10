@@ -29,11 +29,13 @@ struct Provider: TimelineProvider {
         completion(timeline)
     }
 
-    /// Shown in the widget gallery / before the app has written anything.
+    /// Shown in the widget gallery / before the app has written anything. A real padapātha verse so
+    /// the gallery preview (incl. the Large size) is representative.
     static let placeholderPayload = DailyShlokaPayload(
         dayKey: "",
         reference: "2.47",
-        transliteration: "karmaṇy-evādhikāras te",
-        meaning: "(Placeholder) You have a right to action alone, never to its fruits."
+        speaker: nil,
+        transliteration: "karmaṇyevādhikāraste\nmā phaleṣu kadācana |\nmā karmaphalaheturbhūḥ\nmā te saṅgo'stvakarmaṇi ||47||",
+        meaning: "Your right is only to work, but not to its results; do not let the results of action be your motive, nor let your attachment be to inaction."
     )
 }

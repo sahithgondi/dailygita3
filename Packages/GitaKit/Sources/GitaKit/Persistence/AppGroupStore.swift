@@ -7,15 +7,27 @@ public struct DailyShlokaPayload: Codable, Equatable, Sendable {
     /// The day this payload is for ("yyyy-MM-dd"); lets the widget detect a stale value.
     public let dayKey: String
     public let reference: String
+    /// The "<name> uvāca" speaker label, when the verse opens a speech (else nil).
+    public let speaker: String?
+    /// Padapātha transliteration — one pāda per line, joined by "\n", daṇḍa marks baked in.
     public let transliteration: String
     public let meaning: String
 
-    public init(dayKey: String, reference: String, transliteration: String, meaning: String) {
+    public init(dayKey: String, reference: String, speaker: String? = nil,
+                transliteration: String, meaning: String) {
         self.dayKey = dayKey
         self.reference = reference
+        self.speaker = speaker
         self.transliteration = transliteration
         self.meaning = meaning
     }
+
+    /// The pāda lines, split from `transliteration` (the view indents the odd-indexed ones).
+    public var verseLines: [String] { transliteration.split(separator: "\n").map(String.init) }
+
+    /// First pāda — a clean one-line teaser for the small widgets (no daṇḍa marks, which sit on the
+    /// 2nd/4th lines).
+    public var firstPada: String { verseLines.first ?? transliteration }
 }
 
 /// Thin wrapper over `UserDefaults(suiteName:)` for the App Group — the cross-process channel

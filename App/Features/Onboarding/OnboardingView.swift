@@ -5,11 +5,10 @@ import GitaKit
 /// lands on Home. **No sign-in step** — v1 uses CloudKit-only identity (gita-security.md §2,
 /// resolved this session). Skippable to a sensible default so the user is never blocked.
 ///
-/// Phase 0: the controls are placeholders that persist a `Preferences` value; real notification
-/// scheduling is Phase 4.
 struct OnboardingView: View {
     let onFinish: () -> Void
 
+    @Environment(AppModel.self) private var model
     @State private var prefs = AppGroupStore.shared.readPreferences()
 
     var body: some View {
@@ -24,22 +23,21 @@ struct OnboardingView: View {
             }
 
             Form {
-                Section("Daily reminder") {
-                    Toggle("Enable notifications", isOn: $prefs.notificationsEnabled)
-                    Picker("When", selection: $prefs.notificationMode) {
-                        Text("Within 8am–8pm").tag(Preferences.NotificationMode.window)
-                        Text("A specific time").tag(Preferences.NotificationMode.specific)
-                        Text("A custom range").tag(Preferences.NotificationMode.range)
-                    }
-                    .disabled(!prefs.notificationsEnabled)
-                }
+                NotificationSettingsSection(prefs: $prefs)
             }
-            .frame(maxHeight: 220)
+            .frame(maxHeight: 300)
 
             Spacer()
 
             Button("Begin") {
                 AppGroupStore.shared.writePreferences(prefs)
+                // Ask for permission (if reminders are on) and schedule the rolling daily window.
+                Task {
+                    if prefs.notificationsEnabled {
+                        _ = await model.requestNotificationAuthorization()
+                    }
+                    model.scheduleDailyNotifications()
+                }
                 onFinish()
             }
             .buttonStyle(.borderedProminent)

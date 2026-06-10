@@ -8,6 +8,7 @@ import GitaKit
 /// notification scheduling and live font/appearance application are wired in later milestones.
 struct SettingsView: View {
     @AppStorage("hasOnboarded") private var hasOnboarded = false
+    @Environment(AppModel.self) private var model
     @State private var prefs = AppGroupStore.shared.readPreferences()
 
     private var appVersion: String {
@@ -18,15 +19,7 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            Section("Notifications") {
-                Toggle("Enable notifications", isOn: $prefs.notificationsEnabled)
-                Picker("When", selection: $prefs.notificationMode) {
-                    Text("Within 8am–8pm").tag(Preferences.NotificationMode.window)
-                    Text("A specific time").tag(Preferences.NotificationMode.specific)
-                    Text("A custom range").tag(Preferences.NotificationMode.range)
-                }
-                .disabled(!prefs.notificationsEnabled)
-            }
+            NotificationSettingsSection(prefs: $prefs)
 
             Section("Reading") {
                 Picker("Appearance", selection: $prefs.appearance) {
@@ -52,8 +45,21 @@ struct SettingsView: View {
         }
         .navigationTitle("Settings")
         // Persist on any change so edits survive without an explicit save button.
-        .onChange(of: prefs) { _, new in
+        .onChange(of: prefs) { old, new in
             AppGroupStore.shared.writePreferences(new)
+            // Reschedule only when a reminder-affecting field changed (not on font/appearance edits).
+            let reminderChanged = old.notificationsEnabled != new.notificationsEnabled
+                || old.notificationMode != new.notificationMode
+                || old.windowStart != new.windowStart
+                || old.windowEnd != new.windowEnd
+            if reminderChanged {
+                Task {
+                    if new.notificationsEnabled && !old.notificationsEnabled {
+                        _ = await model.requestNotificationAuthorization()
+                    }
+                    model.scheduleDailyNotifications()
+                }
+            }
         }
     }
 }

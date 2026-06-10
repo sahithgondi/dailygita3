@@ -14,6 +14,9 @@ final class AppModel {
     let userStore: UserStore
     let dailyService: DailyShlokaService
 
+    private let planner = NotificationPlanner()
+    private let scheduler = NotificationScheduler()
+
     init(contentStore: ContentStore, userStore: UserStore, dailyService: DailyShlokaService = DailyShlokaService()) {
         self.contentStore = contentStore
         self.userStore = userStore
@@ -35,10 +38,33 @@ final class AppModel {
         let payload = DailyShlokaPayload(
             dayKey: dailyService.dayKey(for: now),
             reference: shloka.reference,
+            speaker: shloka.speaker,
             transliteration: shloka.transliteration,
             meaning: shloka.meaning
         )
         AppGroupStore.shared.writeDailyShloka(payload)
         WidgetCenter.shared.reloadAllTimelines()
+    }
+
+    // MARK: Daily notifications (Phase 4)
+
+    /// Ask for notification permission. Call when the user turns reminders on.
+    func requestNotificationAuthorization() async -> Bool {
+        await scheduler.requestAuthorization()
+    }
+
+    /// Rebuild the rolling window of daily reminders from current preferences. Safe to call on every
+    /// foreground and whenever preferences change; an empty plan (reminders off) clears them. The
+    /// notification for each day carries that day's shloka — the same one Home and the widget show.
+    func scheduleDailyNotifications(now: Date = .now) {
+        let prefs = AppGroupStore.shared.readPreferences()
+        let startOfToday = Calendar.current.startOfDay(for: now)
+        let plan = planner.plan(
+            preferences: prefs,
+            shlokas: contentStore.shlokas,
+            dailyService: dailyService,
+            startOfToday: startOfToday
+        )
+        scheduler.apply(plan)
     }
 }

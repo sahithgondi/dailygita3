@@ -20,6 +20,8 @@
 		89ABCD022FD6287600257492 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD012FD6287600257492 /* Theme.swift */; };
 		89ABCD042FD6287600257492 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD032FD6287600257492 /* NotesView.swift */; };
 		89ABCD062FD6287600257492 /* VerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD052FD6287600257492 /* VerseView.swift */; };
+		89ABCD082FD6287600257492 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD072FD6287600257492 /* NotificationScheduler.swift */; };
+		89ABCD0A2FD6287600257492 /* NotificationSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ABCD092FD6287600257492 /* NotificationSettingsSection.swift */; };
 		89AC16F82FD6287600257492 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16EA2FD6287600257492 /* AppModel.swift */; };
 		89AC16F92FD6287600257492 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DC2FD6287600257492 /* HomeView.swift */; };
 		89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC16DA2FD6287600257492 /* TransliterationGuideView.swift */; };
@@ -87,6 +89,8 @@
 		89ABCD012FD6287600257492 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem/Theme.swift"; sourceTree = "<group>"; };
 		89ABCD032FD6287600257492 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		89ABCD052FD6287600257492 /* VerseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseView.swift; sourceTree = "<group>"; };
+		89ABCD072FD6287600257492 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications/NotificationScheduler.swift"; sourceTree = "<group>"; };
+		89ABCD092FD6287600257492 /* NotificationSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsSection.swift; sourceTree = "<group>"; };
 		89AC16E72FD6287600257492 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		89AC16E82FD6287600257492 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		89AC16EA2FD6287600257492 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				89AC16E22FD6287600257492 /* SettingsView.swift */,
+				89ABCD092FD6287600257492 /* NotificationSettingsSection.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				89AC16E62FD6287600257492 /* Features */,
 				89AC16E92FD6287600257492 /* Navigation */,
 				89ABCD012FD6287600257492 /* Theme.swift */,
+				89ABCD072FD6287600257492 /* NotificationScheduler.swift */,
 				89AC16EA2FD6287600257492 /* AppModel.swift */,
 				89AC16EB2FD6287600257492 /* DailyGita.entitlements */,
 				89AC16EC2FD6287600257492 /* DailyGitaApp.swift */,
@@ -531,6 +537,8 @@
 				89ABCD022FD6287600257492 /* Theme.swift in Sources */,
 				89ABCD042FD6287600257492 /* NotesView.swift in Sources */,
 				89ABCD062FD6287600257492 /* VerseView.swift in Sources */,
+				89ABCD082FD6287600257492 /* NotificationScheduler.swift in Sources */,
+				89ABCD0A2FD6287600257492 /* NotificationSettingsSection.swift in Sources */,
 				89AC16F82FD6287600257492 /* AppModel.swift in Sources */,
 				89AC16F92FD6287600257492 /* HomeView.swift in Sources */,
 				89AC16FA2FD6287600257492 /* TransliterationGuideView.swift in Sources */,
